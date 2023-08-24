@@ -1,0 +1,66 @@
+i've been creating my own database system :
+
+2023_08_21_023029_create_items_table.php
+please for this add :
+item_id as pk (varchar)
+item_name as item name
+item_description and nullable
+item_price (integer)
+item_unit (varchar)
+timestamps
+
+2023_08_21_021951_create_inventory_table.php
+please for this add :
+inv_id as primary key (varchar)
+inv_address for inventory address (text)
+inv_contact for inventory phone number (varchar) nullable
+timestamps
+
+
+2023_08_21_022001_create_store_table.php
+please for this add :
+str_id as pk (varchar)
+str_address for store address (text)
+str_contact for store phone number (varchar) nullable
+timestamps
+
+2023_08_21_022008_create_transaction_stock_table.php
+for this please add :
+trst_id as pk (varchar)
+trst_stock decimal
+id_item for foreign key reference on item table by item_id
+id_inv for foreign key reference on inventory table by inv_id nullable
+id_str for foreign key reference on store table by str_id nullable
+timestamps
+
+2023_08_21_023205_create_products_table.php
+please for this add :
+prd_id as pk (varchar)
+prd_name as product name
+prd_description as product description and nullable
+prd_price (integer)
+timestamps
+
+2023_08_21_024757_create_products_details_table.php
+please for this add :
+prdt_id as pk (varchar)
+id_prd for foreign key reference on products table by prd_id nullable 
+id_item for foreign key reference on item table by item_id
+prdt_item_needed decimal
+timestamps
+
+2023_08_21_022157_create_transaction_sells_table.php
+please for this add :
+trsl_id as pk (varchar)
+trsl_buyerName (varchar)
+timestamps
+
+2023_08_21_022245_create_transaction_sells_detail_table.php
+please for this add :
+trsld_id as pk (varchar)
+id_trsl for foreign key reference on transaction sells table by trsl_id
+id_prd for foreign key reference on products table by prd_id nullable 
+qty as integer
+timestamps
+
+
